@@ -1,0 +1,64 @@
+ .button{
+    font-size: 18px;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: 700;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+  
+     
+ }
+ .inputform {
+    display: flex;
+    justify-content: center; /* Centers horizontally */
+    align-items: center;    /* Centers vertically */
+    height: 88vh;
+    width: 100%;            /* Set width to 100% */
+    box-sizing: border-box; /* Include padding and borders in width */
+}
+
+.input {
+    border: 2px solid rgba(23, 173, 90, 0.493);
+    width: 600px;          /* Set a fixed width or use a percentage less than 100% */
+    max-width: 90%;        /* Ensures responsiveness */
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 18px;
+    border-radius: 8px;
+    font-weight: 600;
+    padding: 5px;
+    margin-left: 20px;     /* Optional spacing */
+    animation: borderAnimation 1s infinite alternate; /* Animation applied */
+}
+
+ 
+
+@keyframes borderAnimation {
+    0% {
+        border-color: rgba(0, 0, 255, 0.455);
+    }
+    100% {
+        border-color: rgba(0, 0, 255, 1); /* Change to a more vivid color */
+    }
+}
+ .Btn22{
+    margin-right: 10px
+ }
+ .main1{
+    display: flex;
+    justify-content: center; /* Centers horizontally */
+    align-items: center;    /* Centers vertically (if needed) */
+    height: 88vh;  
+    
+ }
+ .footer{
+    margin-top: -10px;
+    
+ }
+ .btn{
+    display: flex;
+    flex-direction: row-reverse;
+     
+ }
+ .btn1{
+    margin-left: 12px;
+ }
