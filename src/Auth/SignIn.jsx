@@ -3,7 +3,9 @@ import { Button, message } from 'antd';
 import "../App.css"
 import { LoginOutlined, LogoutOutlined } from '@ant-design/icons';
 import { GoogleAuthProvider, signInWithPopup } from "firebase/auth";
-import { auth, db } from '../Utils/Firebase';
+ 
+import { auth, db } from "../utils/firebase"; // Correct case
+
 import { setDoc , doc} from 'firebase/firestore';
 import {    useNavigate } from 'react-router-dom';
 
