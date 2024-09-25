@@ -4,8 +4,8 @@ import "../App.css"
 import { LoginOutlined, LogoutOutlined } from '@ant-design/icons';
 import { GoogleAuthProvider, signInWithPopup  } from "firebase/auth";
  
- import { auth } from '../utils/Firebase';
- import { db } from '../utils/Firebase';
+ import { auth,db } from '../Utils/Firebase';
+  
 
 import { setDoc , doc} from 'firebase/firestore';
 import {    useNavigate } from 'react-router-dom';

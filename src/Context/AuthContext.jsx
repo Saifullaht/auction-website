@@ -1,7 +1,8 @@
 import { onAuthStateChanged } from "firebase/auth";
 import { createContext, useEffect, useState } from "react";
- import { auth } from "../utils/firebase";
- import { db } from "../utils/firebase";
+ import { auth } from "../Utils/Firebase.js";
+ import {  db } from "../Utils/Firebase.js";
+ 
 import { doc, getDoc } from "firebase/firestore";
 import { Spin } from "antd";
 import { Spinner } from "@nextui-org/react";
