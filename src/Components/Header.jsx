@@ -3,7 +3,8 @@ import React, { useContext } from "react";
 import {Navbar, NavbarBrand, NavbarContent, NavbarItem, NavbarMenuToggle, NavbarMenu, NavbarMenuItem, Link, Button} from "@nextui-org/react";
 import {AcmeLogo} from "./AcmeLogo.jsx";
 import { AccountBookOutlined, BugOutlined, FileAddFilled, FileAddOutlined, HomeOutlined, LoadingOutlined, LoginOutlined, LogoutOutlined, PropertySafetyOutlined, StockOutlined, UserAddOutlined } from "@ant-design/icons";
-import { auth } from "../utils/Firebase.js";
+ import { auth } from "../Utils/Firebase.js";
+
 import { Avatar,   } from "antd";
 import { AuthContext } from "../Context/AuthContext.jsx";
 import { useNavigate } from "react-router-dom";
