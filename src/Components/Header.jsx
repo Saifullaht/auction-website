@@ -78,12 +78,12 @@ export default function Header() {
              All Products
           </Link>
         </NavbarItem>
-        <NavbarItem>
+        {/* <NavbarItem>
           <Link color="foreground" href="/Allproduct">
           <StockOutlined></StockOutlined>
              All Products
           </Link>
-        </NavbarItem>
+        </NavbarItem> */}
       </NavbarContent>
       {/* <NavbarContent justify="end"> */}
         {/* <NavbarItem className="hidden lg:flex"> */}

@@ -8,23 +8,68 @@
   
      
  }
+ .categaries{
+   border: 2px solid blue;
+   width: 600px;     
+   margin-bottom: 7px;      /* Set a fixed width or use a percentage less than 100% */
+   max-width: 100%;        /* Ensures responsiveness */
+   font-family: 'Courier New', Courier, monospace;
+   font-size: 18px;
+   border-radius: 8px;
+   font-weight: 600;
+   margin-top: 20px;
+   padding: 8px;
+   margin-left: 20px;     /* Optional spacing */
+   animation: borderAnimation 1s infinite alternate; /* Animation applied */
+ }
+ .errorsmsg{
+   color: red;
+   font-family: 'Courier New', Courier, monospace;
+    font-weight: 600;
+    text-align: center;justify-content: center;
+    align-items: center;
+    align-content: center;
+   
+ }
+ .input:focus {
+  border-color: #007bff67; /* Change border color on focus */
+  outline: none; /* Remove outline */
+}
+.categaries:focus {
+  border-color: #007bff67; /* Change border color on focus */
+  outline: none; /* Remove outline */
+}
+
+ .Btn100{
+   /* border: 2px solid blue; */
+   background-color:  #006FEE33;
+   color: #004493;
+   padding: 5px 70px ;
+   border-radius: 10px;
+   margin-top: 10px;
+   font-family: 'Courier New', Courier, monospace;
+   font-weight: 600;
+   font-size: 18px;
+ }
+ .Btn100:hover{
+   background-color: #00459335;
+ }
  .inputform {
-    display: flex;
-    justify-content: center; /* Centers horizontally */
-    align-items: center;    /* Centers vertically */
-    height: 88vh;
-    width: 100%;            /* Set width to 100% */
-    box-sizing: border-box; /* Include padding and borders in width */
+   display: flex;
+   flex-direction: column;
+   align-items: center; /* Center all elements horizontally */
 }
 
 .input {
     border: 2px solid rgba(23, 173, 90, 0.493);
-    width: 600px;          /* Set a fixed width or use a percentage less than 100% */
-    max-width: 90%;        /* Ensures responsiveness */
+    width: 600px;     
+    margin-bottom: 7px;      /* Set a fixed width or use a percentage less than 100% */
+    max-width: 100%;        /* Ensures responsiveness */
     font-family: 'Courier New', Courier, monospace;
     font-size: 18px;
     border-radius: 8px;
     font-weight: 600;
+    margin-top: 20px;
     padding: 5px;
     margin-left: 20px;     /* Optional spacing */
     animation: borderAnimation 1s infinite alternate; /* Animation applied */
