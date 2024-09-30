@@ -7,6 +7,7 @@ import { doc, getDoc } from "firebase/firestore";
 import { Spin } from "antd";
 import { Spinner } from "@nextui-org/react";
 import { Loading3QuartersOutlined } from "@ant-design/icons";
+import Loader from "../Components/Loader.jsx";
 
 export const AuthContext = createContext();
 
@@ -39,7 +40,7 @@ function AuthContextProvider({ children }) {
           className="flex h-screen
       justify-center items-center"
         >
-           <Spinner/>{" "}
+           <Loader/>{" "}
         </div>
       ) : (
         children

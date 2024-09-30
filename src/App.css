@@ -18,10 +18,65 @@
    border-radius: 8px;
    font-weight: 600;
    margin-top: 20px;
-   padding: 8px;
+   /* padding: 8px; */
    margin-left: 20px;     /* Optional spacing */
    animation: borderAnimation 1s infinite alternate; /* Animation applied */
  }
+ .hellooo{
+   display: flex;
+    
+   /* flex-direction: row;  */
+   flex-wrap: wrap;      /* Change this to column for vertical layout */
+   /* flex-wrap: wrap; */
+ }
+ .allmain {
+   display: flex;               
+   flex-wrap: wrap;  
+
+   justify-content: center;     /* Center items in the main container */
+   /* padding: 20px;              Add padding around the main container */
+ }
+ 
+ .productmain {
+   border: 2px solid #ccc; 
+   border-radius: 10px;        /* Optional: rounded corners */
+   /* flex: 0 1 calc(25% - 20px); 25% width minus margin for 4 items per row */
+   margin: 10px;   
+   max-width: 300px;       
+   padding: 15px;             
+   text-align: center;         /* Center align text */
+   background-color: #f9f9f9;  /* Background color */
+   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.557); /* Subtle shadow */
+   transition: transform 0.2s; /* Smooth transition on hover */
+ }
+ 
+ .productmain:hover {
+   transform: scale(1.05);     /* Slightly scale up on hover */
+ }
+ 
+ .image {
+   max-width: 270px;             /* Ensure the image fits within the container */
+   min-height: 170px;
+   border-radius: 5px;          /* Optional: for image corners */
+ }
+ .btnmain{
+   display: flex;
+   justify-content: space-between;
+
+ }
+ .btn4{
+   margin-right: 15px;
+ }
+ 
+ h1 {
+   font-size: 1.5em;
+   font-family: 'Courier New', Courier, monospace;            /* Adjust font size as needed */
+   color: #333333fc; 
+    font-weight: 700;
+   margin: 10px 0;             /* Margin above and below the title */
+ }
+ 
+ 
  .errorsmsg{
    color: red;
    font-family: 'Courier New', Courier, monospace;

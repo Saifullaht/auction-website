@@ -67,7 +67,7 @@ export default function Header() {
           </Link>
         </NavbarItem>
         <NavbarItem>
-          <Link color="foreground" href="/Userproduct/:id">
+          <Link color="foreground" href="/Userproduct">
           <PropertySafetyOutlined></PropertySafetyOutlined>
           Product
           </Link>

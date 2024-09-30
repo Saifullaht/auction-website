@@ -12,7 +12,7 @@
 import React from "react";
 import { useForm } from "react-hook-form";
 import "../App.css";
-import { Categaries } from "../utils/Categaries";
+import { Categaries } from "../Utils/Categaries";
 import { addDoc, collection, serverTimestamp } from "firebase/firestore";
 import { auth, db } from "../Utils/Firebase";
 import { message } from "antd";
@@ -28,7 +28,7 @@ function Addproducts() {
   } = useForm();
 
   const onSubmit = (data) => {
-    const productCollectionRef = collection(db, "Products");
+    const productCollectionRef = collection(db, "Products"); // Ensure it is "products"
     const obj = {
       ...data,
       createdAt: serverTimestamp(),

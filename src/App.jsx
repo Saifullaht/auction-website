@@ -16,6 +16,7 @@ import UserProduct from './Users/Products';
 import Bids from './Components/Bids';
 import UserLayout from './Components/UserLayout';
 import Addproducts from './Components/Addproducts';
+import Productdetail from './Components/Productdetail';
 
 function App() {
   return (
@@ -30,6 +31,7 @@ function App() {
             <Route path="/Userproduct/:id" element={< UserProduct/>} />
             <Route path="/Allproducts" element={<Allproduct />} />
             <Route path="/Addproducts" element={< Addproducts />} />
+            <Route path="/productsdetail" element={<Productdetail />} />
           </Route>
           <Route path="/User" element={<UserLayout />}>
             <Route path="UserProfile" element={<UserProfile />} />  
