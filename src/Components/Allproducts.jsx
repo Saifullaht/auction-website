@@ -7,7 +7,7 @@ import {  getDocs,   } from "firebase/firestore";
 import { Categaries } from '../Utils/Categaries';
 import { Button, Image } from 'antd';
 import { Link } from 'react-router-dom';
-import { ArrowsAltOutlined, NotificationTwoTone } from '@ant-design/icons';
+import { ArrowsAltOutlined, Loading3QuartersOutlined, NotificationTwoTone, PicLeftOutlined } from '@ant-design/icons';
 import { useNavigate } from 'react-router-dom';
 import dayjs from 'dayjs';
 import relativeTime from 'dayjs/plugin/relativeTime' // ES 2015
@@ -41,7 +41,7 @@ function AllProducts()  {
   
       <>
       <div className='btnmain'>
-        <h1>  All items</h1>
+        <h1 className='Heading'> All <span className='red0'>items</span> </h1>
        
       </div>
       <div className='hellooo'>
@@ -50,18 +50,18 @@ function AllProducts()  {
 <div className='allmain' key={data.id}>
   <div className='productmain'key={ data.id}>
     <Image className='image' src={data.img} />
-    <Link to={`/productsdetail/ ${data.id}`}>
-    <h1>Date : {dayjs().to(data.createdAt.toDate()) }</h1>
-    <h1>{data.title}</h1>
-    <h1>Product Description: {data.desc}</h1>
-    <h1>Product Price: {data.price}</h1>
-    <h1>Product Location: {data.location} </h1>
-    <h1> product Quantity:  {data.quantity}</h1>
-  </Link>
+     
+    <h1 className='date'> Date : {dayjs().to(data.createdAt.toDate()) }</h1>
+    <h1  className='producttitle'> Product Name:{data.title}</h1>
+    <h1 className='productdesc'> Product Description: {data.desc}</h1>
+    <h1  className='productprice'> Sale Price:  <span className='red'> Rs:{data.price}</span> </h1>
+    <h1 className='productloc'>Product Location: <span className='green'> {data.location}</span>  </h1>
+    <h1 className='productdesc'> product Quantity:  <span className='red'>{data.quantity}</span></h1>
+     <Button onClick={() => navigate(`/productsdetail/ ${data.id}`)}> More Detail</Button>
   </div>
 </div>
 
-   
+    
 
 ))}
  

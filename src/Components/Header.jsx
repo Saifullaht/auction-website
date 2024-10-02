@@ -46,7 +46,7 @@ export default function Header() {
         />
         <NavbarBrand>
           <AcmeLogo />
-          <p className="font-bold text-inherit">BidBazaar</p>
+          <Link href="/" ><p className="font-bold logotext">BidBazaar</p> </Link>
         </NavbarBrand>
       </NavbarContent>
 
@@ -66,12 +66,12 @@ export default function Header() {
            <AccountBookOutlined></AccountBookOutlined>  AboutUs
           </Link>
         </NavbarItem>
-        <NavbarItem>
+        {/* <NavbarItem>
           <Link color="foreground" href="/Userproduct">
           <PropertySafetyOutlined></PropertySafetyOutlined>
           Product
           </Link>
-        </NavbarItem>
+        </NavbarItem> */}
         <NavbarItem>
           <Link color="foreground" href="/Allproducts">
           <StockOutlined></StockOutlined>

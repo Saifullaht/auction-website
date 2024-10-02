@@ -36,11 +36,60 @@
    justify-content: center;     /* Center items in the main container */
    /* padding: 20px;              Add padding around the main container */
  }
+ .date{
+  font-weight: 600;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+ }
+ .producttitle{
+ font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+ font-size: 18px;
+ font-weight: 600;
+ padding: 4px;
+  
  
+ }
+ .productloc{
+ font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+ font-size: 18px;
+ font-weight: 500;
+ padding: 4px;
+  
+ 
+ }
+ .productdesc{
+ font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+ font-size: 18px;
+ font-weight: 500;
+ padding: 4px;
+  
+ 
+ }
+ .logotext{
+  color: black;
+ }
+ .red{
+  color: rgba(255, 0, 0, 0.681);
+  font-family:'Courier New', Courier, monospace ;
+  font-weight: 900;
+ }
+ .green{
+  color: green;
+  font-family:'Courier New', Courier, monospace ;
+  font-weight: 700;
+ }
+
+ .productprice{
+ font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+ font-size: 18px;
+ font-weight: 600;
+ padding: 4px;
+  
+ 
+ }
  .productmain {
    border: 2px solid #ccc; 
    border-radius: 10px;        /* Optional: rounded corners */
-   /* flex: 0 1 calc(25% - 20px); 25% width minus margin for 4 items per row */
+    
    margin: 10px;   
    max-width: 300px;       
    padding: 15px;             
@@ -49,6 +98,19 @@
    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.557); /* Subtle shadow */
    transition: transform 0.2s; /* Smooth transition on hover */
  }
+ .Heading{
+  font-size: 25px;
+  margin-left: 15px;
+  font-weight: 700;
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+ }
+ .red0{
+  font-size: 25px;
+  color: rgba(0, 0, 255, 0.693);
+  /* margin-left: 15px; */
+  font-weight: 700;
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+ }
  
  .productmain:hover {
    transform: scale(1.05);     /* Slightly scale up on hover */
@@ -56,7 +118,7 @@
  
  .image {
    max-width: 270px;             /* Ensure the image fits within the container */
-   min-height: 170px;
+   min-height: 160px;
    border-radius: 5px;          /* Optional: for image corners */
  }
  .btnmain{
@@ -70,7 +132,7 @@
  
  h1 {
    font-size: 1.5em;
-   font-family: 'Courier New', Courier, monospace;            /* Adjust font size as needed */
+   /* font-family: 'Courier New', Courier, monospace;            Adjust font size as needed */
    color: #333333fc; 
     font-weight: 700;
    margin: 10px 0;             /* Margin above and below the title */

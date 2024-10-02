@@ -37,7 +37,7 @@ function Home()  {
   
       <>
       <div className='btnmain'>
-        <h1> Latest items</h1>
+        <h1 className='Heading'> Latest <span className='red0'>items</span> </h1>
       <Button className='btn4' onClick={() => navigate("/Allproducts") }> <ArrowsAltOutlined></ArrowsAltOutlined> See All</Button>
       </div>
       <div className='hellooo'>
@@ -48,11 +48,12 @@ function Home()  {
   <div className='allmain'>
   <div className='productmain' key={data.id}>
     <Image className='image' src={data.img} />
-    <h1> Product Tittle:  {data.title}</h1>
-    <h1>Product Description: {data.desc}</h1>
-    <h1> Sale Price: {data.price}</h1>
-    <h1> Location: {data.location} </h1>
-    <h1> product Quantity:  {data.quantity}</h1>
+    <h1 className='producttitle'> Product Name: {data.title}</h1>
+    <h1 className='productdesc'>Product Description: {data.desc}</h1>
+    <h1 className='productprice'> Sale Price: <span className='red'> Rs:{data.price}</span> </h1>
+    <h1 className='productloc'> Location: <span className='green'> {data.location}</span>  </h1>
+    <h1 className='productdesc'> product Quantity: <span className='red'>{data.quantity}</span> </h1>
+    <Button onClick={() => navigate(`/productsdetail/ ${data.id}`)}> More Detail</Button>
   </div>
 </div>
  
@@ -62,7 +63,7 @@ function Home()  {
  
 </div>
 
-<h1> categaries</h1>
+<h1 className='Heading'> categ<span className='red0'>aries</span></h1>
       <div className='hellooo'>
  {Categaries.map((data) => ( // Use 'products' instead of 'Products'
   <div className='allmain'>
