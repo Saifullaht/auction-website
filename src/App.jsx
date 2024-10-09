@@ -28,13 +28,13 @@ function App() {
           <Route path="/" element={<Layout />}>
             <Route index element={<Home />} />
             <Route path="/About" element={<About />} />
-            <Route path="/Userproduct/:id" element={< UserProduct/>} />
+            <Route path="Userproduct/:id" element={< UserProduct/>} />
             <Route path="/Allproducts" element={<Allproduct />} />
             <Route path="/Addproducts" element={< Addproducts />} />
-            <Route path="/productsdetail" element={<Productdetail />} />
+            <Route path="Allproducts/:id" element={<Productdetail/> } />
           </Route>
           <Route path="/User" element={<UserLayout />}>
-            <Route path="UserProfile" element={<UserProfile />} />  
+            <Route path="/UserProfile" element={<UserProfile />} />  
             <Route path="products" element={<UserProduct />} />
             <Route path="Bids" element={<Bids />} />
           </Route>

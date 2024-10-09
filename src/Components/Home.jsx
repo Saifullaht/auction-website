@@ -6,13 +6,14 @@ import { db  } from '../Utils/Firebase'
 import {  getDocs,   } from "firebase/firestore";
 import { Categaries } from '../Utils/Categaries';
 import { Button, Image } from 'antd';
+ 
 import { ArrowsAltOutlined, Loading3QuartersOutlined, NotificationTwoTone, TwitchOutlined } from '@ant-design/icons';
 import { Link, useNavigate } from 'react-router-dom';
 
 
 function Home()  {
   const [product, setProducts] = useState([]);
-  const navigate = useNavigate( )
+  const navigate = useNavigate()
   useEffect(() =>{
     getProducts()
   },[ ]);
@@ -42,7 +43,7 @@ function Home()  {
       </div>
       <div className='hellooo'>
  {product.map((data) => ( 
-  
+   
  
 
   <div className='allmain'>

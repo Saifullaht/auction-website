@@ -45,19 +45,20 @@ function AllProducts()  {
        
       </div>
       <div className='hellooo'>
- {product.map((data) => ( // Use 'products' instead of 'Products'
+ {product.map((data) => ( 
 
 <div className='allmain' key={data.id}>
   <div className='productmain'key={ data.id}>
     <Image className='image' src={data.img} />
-     
+    <Link to={`/Allproducts/${data.id}`} key={data.id}>
     <h1 className='date'> Date : {dayjs().to(data.createdAt.toDate()) }</h1>
     <h1  className='producttitle'> Product Name:{data.title}</h1>
     <h1 className='productdesc'> Product Description: {data.desc}</h1>
     <h1  className='productprice'> Sale Price:  <span className='red'> Rs:{data.price}</span> </h1>
     <h1 className='productloc'>Product Location: <span className='green'> {data.location}</span>  </h1>
     <h1 className='productdesc'> product Quantity:  <span className='red'>{data.quantity}</span></h1>
-     <Button onClick={() => navigate(`/productsdetail/ ${data.id}`)}> More Detail</Button>
+     </Link>
+     {/* <Button onClick={ () => navigate( `/productsdetail/${data.id}` ) } key={data.id}> More Detail</Button> */}
   </div>
 </div>
 
