@@ -55,7 +55,7 @@ function Home() {
       <ImageSlider images={sliderImages} />
 
       <div className='btnmain'>
-        <div className='btnmain2'>
+        <div className='btnmain2 '>
           <h1 className='Heading'> Latest <span className='red0'>items</span></h1>
           <Button className='btn4' onClick={() => navigate("/Allproducts")}>
             <ArrowsAltOutlined /> See All

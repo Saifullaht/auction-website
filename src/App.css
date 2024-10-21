@@ -8,6 +8,7 @@
   
      
  }
+
  
 
  .bidinput{
@@ -185,12 +186,13 @@ cursor: pointer;
    display: flex;
    justify-content: space-between;
    /* border: 2px solid black; */
-   padding-top: 30px;
+   padding-top: -30px;
    width: 90%;
    margin: auto;
+   /* margin-top: -20px; */
 
  }
- .btnmain::after{
+ /* .btnmain::after{
   content: "";
   display: block;
   background-color: orange;
@@ -200,18 +202,18 @@ cursor: pointer;
   height: 0.6rem;
   border-radius: 1rem;
   margin-bottom: 2rem;
-}
-.Heading1::after{
+} */
+/* .Heading1::after{
   content: "";
   display: block;
   background-color: orange;
   
   width: 70%;
-  /* margin-left: 80px; */
+  margin-left: 80px;
   height: 0.6rem;
   border-radius: 1rem;
   margin-bottom: 2rem;
-}
+} */
 .images10{
      height: 500px;
      width: 100%;
@@ -236,7 +238,7 @@ cursor: pointer;
    height: 700px;
    margin: auto;
  }
-.Heading2::after{
+/* .Heading2::after{
   content: "";
   display: block;
   background-color: orange;
@@ -246,7 +248,7 @@ cursor: pointer;
   height: 0.6rem;
   border-radius: 1rem;
   margin-bottom: 2rem;
-}
+} */
  .btn4{
    margin-right: 15px;
  }

@@ -107,6 +107,9 @@
  
  .btn4 {
    margin-left: auto;
+   
+      margin-top: 45px;
+     
  }
  
  /* Product cards */
@@ -159,7 +162,7 @@
    }
  
    .btn4 {
-     margin-top: 10px;
+     margin-top: 50px;
    }
  
    .allmain {

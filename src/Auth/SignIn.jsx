@@ -13,7 +13,7 @@ const SignIn = () => {
   useEffect(() => {
     const unsubscribe = auth.onAuthStateChanged((user) => {
       if (user) {
-        message.success("You are already logged in.", 10); // Show for 10 seconds
+        message.success("You are already logged in.", 1); // Show for 10 seconds
         navigate("/"); // Redirect to home if already logged in
       } else {
         message.info("Please, sir, first log in, and then you can go to the website."
