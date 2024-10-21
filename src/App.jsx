@@ -1,14 +1,11 @@
-import { useState } from 'react';
-import reactLogo from './assets/react.svg';
-import viteLogo from '/vite.svg';
+import React, { useContext } from 'react';
+import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
+import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 import './App.css';
-// import { Button, FloatButton } from 'antd';
 import Header from './Components/Header';
 import About from './Components/About';
 import Home from './Components/Home';
-import { Route, BrowserRouter, Routes } from 'react-router-dom';
 import SignIn from './Auth/SignIn';
-import Product from './Users/Products';
 import Allproduct from './Components/Allproducts';
 import Layout from './Components/Layout';
 import UserProfile from './Users/Profile';
@@ -17,30 +14,38 @@ import Bids from './Components/Bids';
 import UserLayout from './Components/UserLayout';
 import Addproducts from './Components/Addproducts';
 import Productdetail from './Components/Productdetail';
+import { AuthContext } from './Context/AuthContext';
+
+const queryClient = new QueryClient();
+
+const ProtectedRoute = ({ element, user }) => {
+  return user?.isLogin ? element : <Navigate to="/SignIn" />;
+};
 
 function App() {
+  const { user } = useContext(AuthContext);
+
   return (
-    <>
+    <QueryClientProvider client={queryClient}>
       <BrowserRouter>
-        {/* <Header /> */}
         <Routes>
           <Route path="/SignIn" element={<SignIn />} />
           <Route path="/" element={<Layout />}>
-            <Route index element={<Home />} />
-            <Route path="/About" element={<About />} />
-            <Route path="Userproduct/:id" element={< UserProduct/>} />
+            <Route index element={<ProtectedRoute element={<Home/>} user={user}/>} />
+            <Route path="/About" element={ <ProtectedRoute element={<About/>} user={user} />} />
+            <Route path="Userproduct/:id" element={<UserProduct />} />
             <Route path="/Allproducts" element={<Allproduct />} />
-            <Route path="/Addproducts" element={< Addproducts />} />
-            <Route path="Allproducts/:id" element={<Productdetail/> } />
+            <Route path="/Addproducts" element={<ProtectedRoute element={<Addproducts />} user={user} />} />
+            <Route path="Allproducts/:id" element={<Productdetail />} />
           </Route>
-          <Route path="/User" element={<UserLayout />}>
-            <Route path="/UserProfile" element={<UserProfile />} />  
+          <Route path="/User" element={<ProtectedRoute element={<UserLayout />} user={user} />}>
+            <Route path="Profile" element={<UserProfile />} />
             <Route path="products" element={<UserProduct />} />
-            <Route path="Bids" element={<Bids />} />
+            <Route path="bids" element={<Bids />} />
           </Route>
         </Routes>
       </BrowserRouter>
-    </>
+    </QueryClientProvider>
   );
 }
 

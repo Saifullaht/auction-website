@@ -1,0 +1,82 @@
+.inputform {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 30px; /* Increased padding for mobile */
+    min-height: 100vh; /* Ensure it takes the full height */
+  }
+  
+  .input {
+    border: 2px solid rgba(23, 173, 90, 0.493);
+    width: 100%;
+    max-width: 600px;
+    margin-bottom: 10px; /* Increased margin for spacing */
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 18px;
+    border-radius: 8px;
+    font-weight: 600;
+    padding: 10px; /* Padding for input */
+  }
+  
+  .categaries {
+    border: 2px solid blue;
+    width: 100%;
+    max-width: 600px;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 18px;
+    border-radius: 8px;
+    font-weight: 600;
+    margin-top: 20px;
+    padding: 10px; /* Padding for select */
+  }
+  
+  .Btn100 {
+    background-color: #006FEE33;
+    color: #004493;
+    padding: 10px 70px;
+    border-radius: 10px;
+    margin-top: 20px; /* Increased margin for spacing */
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: 600;
+    font-size: 18px;
+  }
+  
+  .Btn100:hover {
+    background-color: #00459335;
+  }
+  
+  /* Media Queries for responsiveness */
+  @media (max-width: 768px) {
+    .inputform {
+      padding: 20px; /* Adjust padding for tablet */
+    }
+  
+    .input,
+    .categaries {
+      font-size: 16px; /* Adjust font size for smaller screens */
+    }
+  
+    .Btn100 {
+      padding: 8px 50px; /* Adjust button padding for smaller screens */
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .input,
+    .categaries {
+      font-size: 14px; /* Further adjust font size for mobile */
+    }
+  
+    .Btn100 {
+      padding: 6px 30px; /* Adjust button padding for mobile */
+    }
+  }
+  
+  .errorsmsg {
+    color: red;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: 600;
+    text-align: center;
+  }
+  
+  

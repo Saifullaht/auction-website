@@ -11,7 +11,7 @@
 
 import React from "react";
 import { useForm } from "react-hook-form";
-import "../App.css";
+import "./addproduct.css";
 import { Categaries } from "../Utils/Categaries";
 import { addDoc, collection, serverTimestamp } from "firebase/firestore";
 import { auth, db } from "../Utils/Firebase";

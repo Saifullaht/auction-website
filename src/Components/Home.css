@@ -1,0 +1,186 @@
+ .slider-image{
+    /* border: 1dvi solid; */
+    border-radius: 12px;
+    margin: auto;
+    width: 88%;
+    height: 430px;
+ }
+ .border{
+   margin-top: 60px;
+   border:  2px solid black;
+   height: 400px;
+ }
+ .border2{
+   margin-top: 60px;
+   border:  2px solid black;
+   height: 400px;
+   width: 40%;
+ }
+ .btn10{
+    margin-top: 30px;
+    padding: 21px;
+    font-size: 19;
+    
+
+    font-weight: 600;
+    /* width: 100%; */
+    /* border: 2px solid rgb(167, 85, 85); */
+     
+    }
+    .btndiv{
+       
+      /* margin: auto; */
+     /* border: 2px solid black; */
+    }
+ .main22{
+    background-color: rgba(128, 128, 128, 0.134);
+    margin-top: -45px;
+ }
+ .wellcome{
+    /* border: 2px solid black; */
+    margin: 20px;
+     padding-top: 90px;
+    width: 95%;
+    margin-bottom: 40px;
+
+ }
+ .autoo{
+    font-size: 28px;
+    font-family: 'Times New Roman', Times, serif ;
+    font-weight: 600;
+    margin: auto;
+    margin-top: 80px;
+    width: 25%;
+    /* border: 2px solid black; */
+ }
+ .auto2{
+    font-size: 17px;
+    font-family: 'Times New Roman', Times, serif ;
+    font-weight: 500;
+    margin: auto;
+    text-align: center;
+    margin-bottom: 60px;
+    margin-top: 20px;
+     width: 60%;
+
+    /* border: 2px solid black; */
+ }
+.orange{
+    color: orange;
+}
+
+
+/* Home.css */
+
+/* General styles */
+.main22 {
+   padding: 20px;
+   background-color: #f9f9f9;
+ }
+ 
+ .wellcome {
+   text-align: center;
+   margin-bottom: 30px;
+ }
+ 
+ .autoo {
+   font-size: 24px;
+   font-weight: bold;
+ }
+ 
+ .orange {
+   color: orange;
+ }
+ 
+ .auto2 {
+   font-size: 16px;
+   line-height: 1.5;
+ }
+ 
+ /* Image slider */
+ .btnmain {
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   margin: 20px 0;
+ }
+ 
+ .btn4 {
+   margin-left: auto;
+ }
+ 
+ /* Product cards */
+ .hellooo {
+   display: flex;
+   flex-wrap: wrap;
+   justify-content: center;
+ }
+ 
+ .allmain {
+   width: 100%;
+   max-width: 300px;
+   margin: 15px;
+   background: white;
+   border: 1px solid #ddd;
+   border-radius: 8px;
+   padding: 10px;
+   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+ }
+ 
+ .productmain {
+   text-align: center;
+ }
+ 
+ .image {
+   width: 100%;
+   height: auto;
+   border-radius: 8px;
+ }
+ 
+ .producttitle,
+ .productdesc,
+ .productprice {
+   margin: 10px 0;
+ }
+ 
+ /* Responsive styles */
+ @media (max-width: 768px) {
+   .autoo {
+     font-size: 20px;
+   }
+ 
+   .auto2 {
+     font-size: 14px;
+   }
+ 
+   .btnmain {
+     flex-direction: column;
+     align-items: flex-start;
+   }
+ 
+   .btn4 {
+     margin-top: 10px;
+   }
+ 
+   .allmain {
+     width: 100%;
+     max-width: 90%;
+   }
+ }
+ 
+ @media (max-width: 480px) {
+   .autoo {
+     font-size: 18px;
+     margin-top: -40px;
+   }
+ 
+   .auto2 {
+     font-size: 12px;
+     
+   }
+ 
+   .image {
+     height: 150px; /* Adjust image height for smaller screens */
+   }
+ }
+ 

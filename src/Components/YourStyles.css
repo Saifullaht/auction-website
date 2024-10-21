@@ -1,0 +1,23 @@
+@keyframes slideIn {
+    from {
+      transform: translateY(-50px);
+      opacity: 0;
+    }
+    to {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+  
+  .images10 {
+    height: 500px;
+    width: 100%;
+    border-radius: 18px;
+    animation: slideIn 0.5s ease forwards; /* Animation applied */
+    opacity: 0; /* Start as invisible */
+  }
+  
+  .show {
+    opacity: 1; /* Fully visible when scrolled into view */
+  }
+  

@@ -1,130 +1,97 @@
 import React, { useContext } from "react";
- 
-import {Navbar, NavbarBrand, NavbarContent, NavbarItem, NavbarMenuToggle, NavbarMenu, NavbarMenuItem, Link, Button} from "@nextui-org/react";
-import {AcmeLogo} from "./AcmeLogo.jsx";
-import { AccountBookOutlined, BugOutlined, FileAddFilled, FileAddOutlined, HomeOutlined, LoadingOutlined, LoginOutlined, LogoutOutlined, PropertySafetyOutlined, StockOutlined, UserAddOutlined } from "@ant-design/icons";
- import { auth } from "../Utils/Firebase.js";
-
-import { Avatar,   } from "antd";
+import { Navbar, NavbarBrand, NavbarContent, NavbarItem, NavbarMenuToggle, NavbarMenu, NavbarMenuItem, Link, Button } from "@nextui-org/react";
+import { AcmeLogo } from "./AcmeLogo.jsx";
+import { AccountBookOutlined, HomeOutlined, StockOutlined, UserAddOutlined, LoginOutlined } from "@ant-design/icons";
+import { auth } from "../Utils/Firebase.js";
+import { Avatar } from "@nextui-org/react";
 import { AuthContext } from "../Context/AuthContext.jsx";
 import { useNavigate } from "react-router-dom";
- 
 
 export default function Header() {
-  const navigate = useNavigate()
-  const {user} = useContext(AuthContext)
-  console.log(user);
-  const addproduct = ()=>{
-      if(user.isLogin){
-      
-      }else{
-        navigate("/SignIn")
-      }
-  }
-  
-  const [isMenuOpen, setIsMenuOpen] = React.useState(false);
+    const navigate = useNavigate();
+    const { user } = useContext(AuthContext);
 
-  const menuItems = [
-    "Profile",
-    "Dashboard",
-    "Activity",
-    "Analytics",
-    "System",
-    "Deployments",
-    "My Settings",
-    "Team Settings",
-    "Help & Feedback",
-    "Log Out",
-  ];
+    const handleAddProduct = () => {
+        if (user && user.isLogin) {
+            navigate("/Addproducts");  
+        } else {
+            navigate("/SignIn"); 
+        }
+    };
+    
+    const [isMenuOpen, setIsMenuOpen] = React.useState(false);
 
-  return (
-    <Navbar onMenuOpenChange={setIsMenuOpen}>
-      <NavbarContent>
-        <NavbarMenuToggle
-          aria-label={isMenuOpen ? "Close menu" : "Open menu"}
-          className="sm:hidden"
-        />
-        <NavbarBrand>
-          <AcmeLogo />
-          <Link href="/" ><p className="font-bold logotext">BidBazaar</p> </Link>
-        </NavbarBrand>
-      </NavbarContent>
+    const menuItems = [
+        { label: "Home", icon: <HomeOutlined />, link: "/" },
+        { label: "About Us", icon: <AccountBookOutlined />, link: "/About" },
+        { label: "All Products", icon: <StockOutlined />, link: "/Allproducts" },
+        { label: "Log Out", icon: <UserAddOutlined />, action: () => auth.signOut() },
+    ];
 
-      <NavbarContent className="hidden sm:flex gap-4" justify="center">
-        <NavbarItem>
-          {/* <Link color="foreground" href="/" >
-            Home
-          </Link> */}
-        </NavbarItem>
-        <NavbarItem  >
-          <Link href=" /" aria-current="page">
-          <HomeOutlined></HomeOutlined> Home
-          </Link>
-        </NavbarItem>
-        <NavbarItem>
-          <Link color="foreground" href=" /About">
-           <AccountBookOutlined></AccountBookOutlined>  AboutUs
-          </Link>
-        </NavbarItem>
-        {/* <NavbarItem>
-          <Link color="foreground" href="/Userproduct">
-          <PropertySafetyOutlined></PropertySafetyOutlined>
-          Product
-          </Link>
-        </NavbarItem> */}
-        <NavbarItem>
-          <Link color="foreground" href="/Allproducts">
-          <StockOutlined></StockOutlined>
-             All Products
-          </Link>
-        </NavbarItem>
-        {/* <NavbarItem>
-          <Link color="foreground" href="/Allproduct">
-          <StockOutlined></StockOutlined>
-             All Products
-          </Link>
-        </NavbarItem> */}
-      </NavbarContent>
-      {/* <NavbarContent justify="end"> */}
-        {/* <NavbarItem className="hidden lg:flex"> */}
-          {/* <Link href="#">Login</Link> */}
-        {/* </NavbarItem>
-        <NavbarItem>
-          <Button as={Link} color="primary" href="/SignIn" variant="flat">
-          <LoginOutlined></LoginOutlined>  Sign Up
-          </Button>
-        </NavbarItem>
-      </NavbarContent> */}
-      {
-     auth.currentUser ? (
-     <div>
-      <Button as={Link} href="/Addproducts"  onClick={addproduct} className="Btn22" color="primary"   variant="flat"><UserAddOutlined></UserAddOutlined>  Add-Products
-      </Button>
-      <Avatar  src = {user?.photoUrl} /> 
-     </div> ) : (
-       <div className="btn">
-       <Button className="btn1" color="primary" as={Link} href="/SignIn"  variant="flat">  <LoginOutlined></LoginOutlined> LogIn
-          </Button>
-    <Button   color="primary"   variant="flat"><UserAddOutlined></UserAddOutlined>  Add-Products
-          </Button>
-     </div>
-      )}
-      <NavbarMenu>
-        {menuItems.map((item, index) => (
-          <NavbarMenuItem key={`${item}-${index}`}>
-            <Link
-              color={
-                index === 2 ? "primary" : index === menuItems.length - 1 ? "danger" : "foreground"
-              }
-              className="w-full"
-              href="#"
-              size="lg"
-            >
-              {item}
-            </Link>
-          </NavbarMenuItem>
-        ))}
-      </NavbarMenu>
-    </Navbar>
-  );
+    return (
+        <Navbar onMenuOpenChange={setIsMenuOpen}>
+            <NavbarContent>
+                <NavbarMenuToggle aria-label={isMenuOpen ? "Close menu" : "Open menu"} className="sm:hidden" />
+                <NavbarBrand>
+                    <AcmeLogo />
+                    <Link href="/"><p className="font-bold logotext logo">BidBazaar</p></Link>
+                </NavbarBrand>
+            </NavbarContent>
+
+            <NavbarContent className="hidden sm:flex gap-6" justify="center">
+                {menuItems.slice(0, 3).map((item, index) => (
+                    <NavbarItem key={index}>
+                        <Link href={item.link}>
+                            {item.icon} {item.label}
+                        </Link>
+                    </NavbarItem>
+                ))}
+                {/* Show Add Products button on larger screens */}
+                <NavbarItem>
+                    <Button onClick={handleAddProduct} color="primary">
+                        <UserAddOutlined /> Add Products
+                    </Button>
+                </NavbarItem>
+            </NavbarContent>
+
+            <NavbarContent justify="end">
+                {auth.currentUser ? (
+                    <div>
+                        <Button as={Link} href="/User/Profile">
+                            <Avatar isBordered color="primary  " src={user?.photoUrl} />
+                        </Button>
+                    </div>
+                ) : (
+                    <div className="btn">
+                        <Button className="btn1 ml-20 " color="primary" as={Link} href="/SignIn" variant="flat">
+                            <LoginOutlined /> Log In
+                        </Button>
+                    </div>
+                )}
+            </NavbarContent>
+
+            <NavbarMenu>
+                {menuItems.map((item, index) => (
+                    <NavbarMenuItem key={`${item.label}-${index}`}>
+                        <Link
+                            color={index === menuItems.length - 1 ? "danger" : "foreground"}
+                            className="w-full"
+                            href={item.link || "#"}
+                            size="lg"
+                            onClick={item.action}
+                        >
+                            {item.icon} {item.label}
+                        </Link>
+                    </NavbarMenuItem>
+                ))}
+                {/* Add Products button in hamburger menu for smaller screens */}
+                <NavbarMenuItem>
+                    <Link onClick={handleAddProduct} color="foreground" className="w-full">
+                        <UserAddOutlined /> Add Products
+                    </Link>
+                </NavbarMenuItem>
+            </NavbarMenu>
+        </Navbar>
+    );
 }
+

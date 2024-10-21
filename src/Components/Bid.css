@@ -1,0 +1,54 @@
+.bids-container {
+    display: flex;
+    flex-direction: column; /* Stack items vertically */
+    align-items: center; /* Center align items */
+    /* padding: 20px; */
+    /* border: 2px solid black; */
+}
+
+.bid {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.bid-item {
+    display: flex;
+    flex-direction: column; /* Stack bid details vertically */
+    justify-content: space-between; /* Space between bid details */
+    border: 1px solid #ddd; /* Add border for better visibility */
+    border-radius: 5px;
+    padding: 15px;
+    margin: 10px 0; /* Add space between bid items */
+    width: 100%; /* Full width */
+    max-width: 600px; /* Maximum width for larger screens */
+}
+
+.pricebid, .datejs, .bidstatus {
+    margin: 5px 0; /* Space between text items */
+}
+
+/* Mobile styles */
+@media (max-width: 768px) {
+    .bids-container {
+        /* padding: 10px; Reduce padding for mobile */
+    }
+
+    .bid-item {
+        padding: 10px; /* Reduce padding for mobile */
+    }
+
+    .bid {
+        font-size: 20px; /* Slightly smaller font size for mobile */
+    }
+}
+
+/* Tablet styles */
+@media (min-width: 1px) and (max-width: 400px) {
+    .bids-container {
+        padding: 15px; /* Adjust padding for tablet */
+    }
+
+    .bid {
+        font-size: 22px; /* Adjust font size for tablet */
+    }
+}
