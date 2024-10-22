@@ -1,0 +1,13 @@
+[build]
+  publish = "build" # Directory jahan build output hoga
+  command = "npm run build" # Build command
+
+[[redirects]]
+  from = "/old-route"
+  to = "/new-route"
+  status = 301 # Permanent Redirect
+
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
